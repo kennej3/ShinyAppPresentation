@@ -1,0 +1,78 @@
+---
+title       : The Value of Interest
+subtitle    : A shiny application
+author      : James Kennedy
+job         : 
+framework   : io2012    # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : default     # 
+widgets     : [mathjax,bootstrap,quiz]            # {mathjax, quiz, bootstrap}
+mode        : standalone # {selfcontained, standalone, draft}
+knit        : slidify::knit2slides
+---.title-slide {background-color: #FFFFFF;}
+
+
+## Introduction
+
+This presentation looks at value of interest payments on a principal amount of money that is loaned to a borrower.  
+<br>
+It discusses:
+
+* What is interest
+* Differences between simple and compound interest
+* The Compound Interest shiny app
+
+<br>
+Since the lending and borrowing of money is an important component of most economies, it is important to understand the effects and value of interest.
+
+--- 
+
+## What is interest?
+
+Interest is money payed to a lender for the privilege of borrowing money. There are many examples of this:
+
+* You are payed interest on money that you deposit into a bank
+* When you purchase a bond, you are paid interest (the bond yield)
+* When you take out a mortgage (borrow money to purchase a house) you pay interest on the loan
+
+Three factors that determine the amount of money payed from interest are: 
+
+1. The principal (the amount of money being loaned). 
+2. The interest rate.
+3. The length of time that the principal is loaned.
+
+--- &radio
+
+## Types of Interest
+
+We will consider two types of interest: Simple and Compound.
+Simple interest pays interest only on the principal.  The amount the lender receives after x number of years is: $$Amount = Principal*(1+rate*x)$$
+Compound interest pays interest on the principal and accumulated interest (payed annually). The amount the lender receives after x number of years is: $$Amount = Principal*(1+rate)^{x}$$
+
+### Question:
+What type of interest returns the largest sum of money?
+
+1. Simple
+2. _Compound_
+
+*** .hint
+Simple interest will grow linearly with time. Compound interest will grow exponentially!
+*** .explanation
+Simple interest only gives a return on the principal investment. Compound interest will give a return on the principal <u>and</u> any accumulated interest!
+
+---
+
+## The Compound Interest shiny ap
+
+You can calculate the value of your loan using R. For example, if you lend $5000 at a 4% interest rate, compounded annually, for 5 years, you'll get:
+
+```{r load_calc}
+value <- 5000*(1+0.04)^5
+round(value,2)
+```
+
+However, the <u>Compound Interest shiny app</u> has been created to make the calculation of simple and compound interest quick and easy!
+
+The application calculates the final amount (principal+interest) in both the simple and compound interest cases. The results are also plotted as a function of time to show how your money grows!
+
+Please visit the Compound Interest shiny app at <br> [https://kennej3.shinyapps.io/CompoundInterest](https://kennej3.shinyapps.io/CompoundInterest) today!
